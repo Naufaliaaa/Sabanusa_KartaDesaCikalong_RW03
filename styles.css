@@ -21,7 +21,9 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-/* Navigation */
+/* ================================
+   NAVIGATION
+================================ */
 nav {
     position: fixed;
     top: 0;
@@ -92,6 +94,7 @@ nav {
     width: 100%;
 }
 
+/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -118,7 +121,9 @@ nav {
     transform: rotate(45deg) translate(7px, -6px);
 }
 
-/* Hero Sections */
+/* ================================
+   HERO SECTIONS
+================================ */
 .hero {
     height: 80vh;
     background-size: cover;
@@ -163,7 +168,9 @@ nav {
     margin-bottom: 1rem;
 }
 
-/* Buttons */
+/* ================================
+   BUTTONS
+================================ */
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -202,42 +209,16 @@ nav {
     flex-wrap: wrap;
 }
 
-/* Profil Page */
-.profil-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+/* ================================
+   HOME PAGE
+================================ */
+.profil-summary,
+.contact-summary {
     padding: 5rem 0;
-    align-items: center;
 }
 
-.profil-details h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.profil-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #666;
-}
-
-.profil-image img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.stats-section {
-    padding: 4rem 0;
-    background: #f8f9fa;
-}
-
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+.kegiatan-summary {
+    padding: 5rem 0;
 }
 
 .section-header {
@@ -286,25 +267,45 @@ nav {
     background: #f8f9fa;
 }
 
-.profil-summary,
-.contact-summary {
+/* ================================
+   PROFIL PAGE
+================================ */
+.profil-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     padding: 5rem 0;
+    align-items: center;
 }
 
-.kegiatan-summary {
-    padding: 5rem 0;
+.profil-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
 }
 
-@media (max-width: 768px) {
-    .summary-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .profil-summary,
-    .contact-summary,
-    .kegiatan-summary {
-        padding: 3rem 0;
-    }
+.profil-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.profil-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.stats-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .stat {
@@ -317,14 +318,16 @@ nav {
     margin-bottom: 0.5rem;
 }
 
-/* Kegiatan Page */
+/* ================================
+   KEGIATAN PAGE
+================================ */
 .activities-section {
     padding: 5rem 0;
 }
 
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -356,7 +359,9 @@ nav {
     color: #333;
 }
 
-/* Contact Page */
+/* ================================
+   KONTAK PAGE
+================================ */
 .contact-section {
     padding: 5rem 0;
 }
@@ -392,6 +397,7 @@ nav {
     align-items: center;
     justify-content: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
 }
 
 .contact-form {
@@ -428,7 +434,9 @@ nav {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 footer {
     background: #f3f4f6;
     color: #1f2937;
@@ -534,11 +542,191 @@ footer {
     color: #6b7280;
 }
 
-/* Responsive Footer */
+/* ================================
+   RESPONSIVE - TABLET (max 768px)
+================================ */
 @media (max-width: 768px) {
+
+    /* Navbar - hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(255,255,255,0.99);
+        width: 100%;
+        height: calc(100vh - 70px);
+        text-align: center;
+        padding: 4rem 20px;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        gap: 1.5rem;
+        backdrop-filter: blur(20px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 60vh;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profil-hero,
+    .kegiatan-hero,
+    .kontak-hero {
+        height: auto;
+        min-height: 40vh;
+        padding: 100px 20px 40px;
+    }
+
+    .profil-hero h1,
+    .kegiatan-hero h1,
+    .kontak-hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Home sections */
+    .summary-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profil-summary,
+    .contact-summary,
+    .kegiatan-summary {
+        padding: 3rem 0;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Profil */
+    .profil-details {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+
+    .profil-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    /* Kegiatan */
+    .activities-section {
+        padding: 3rem 0;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Kontak */
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Footer */
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem 20px;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+
+    .footer-links ul li a {
+        justify-content: center;
+    }
+
+    .footer-email-box {
+        justify-content: center;
+    }
+
+    .footer-email p {
+        text-align: center;
+    }
+}
+
+/* ================================
+   RESPONSIVE - MOBILE (max 480px)
+================================ */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .profil-hero h1,
+    .kegiatan-hero h1,
+    .kontak-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .stat h3 {
+        font-size: 2.2rem;
+    }
+
+    .footer-email-box a {
+        font-size: 0.8rem;
+        word-break: break-all;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
     }
 }
