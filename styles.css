@@ -48,6 +48,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .logo-img {
@@ -429,75 +430,115 @@ nav {
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+    background: #f3f4f6;
+    color: #1f2937;
     margin-top: 4rem;
+    border-top: 1px solid #e5e7eb;
 }
 
-/* Responsive */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.footer-about p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+    color: #dc2626;
+}
+
+.footer-links ul li a i {
+    font-size: 1rem;
+    width: 18px;
+    text-align: center;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.footer-links ul li a:hover i {
+    color: #dc2626;
+}
+
+.footer-email p {
+    font-size: 0.92rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.footer-email-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.75rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.footer-email-box i {
+    color: #dc2626;
+    font-size: 1rem;
+}
+
+.footer-email-box a {
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-email-box a:hover {
+    color: #dc2626;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 1.2rem 20px;
+    font-size: 0.88rem;
+    color: #6b7280;
+}
+
+/* Responsive Footer */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: white;
-        width: 100%;
-        text-align: center;
-        padding: 2rem 0;
-        transition: left 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .profil-hero h1,
-    .kegiatan-hero h1,
-    .kontak-hero h1 {
-        font-size: 2rem;
-    }
-
-    .profil-details,
-    .contact-content {
+    .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .container {
-        padding: 0 15px;
+        padding: 2rem 20px;
     }
 }

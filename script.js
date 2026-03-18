@@ -10,14 +10,19 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking link
-        document.querySelectorAll('.nav-link').forEach(link => {
+// Close menu when clicking link (nav-link + logo)
+        document.querySelectorAll('.nav-link, .logo').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
         });
     }
+
+    // Logo click to home
+    document.querySelector('.logo').addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
 
     // Set active nav link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
