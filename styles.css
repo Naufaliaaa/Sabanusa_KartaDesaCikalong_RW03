@@ -111,7 +111,7 @@ nav {
 
 /* Hero Sections */
 .hero {
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -229,6 +229,73 @@ nav {
     display: flex;
     justify-content: center;
     gap: 3rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.summary-text {
+    font-size: 1.1rem;
+}
+
+.summary-image,
+.summary-text img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.contact-teaser {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.contact-teaser h3 {
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.bg-light {
+    background: #f8f9fa;
+}
+
+.profil-summary,
+.contact-summary {
+    padding: 5rem 0;
+}
+
+.kegiatan-summary {
+    padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profil-summary,
+    .contact-summary,
+    .kegiatan-summary {
+        padding: 3rem 0;
+    }
 }
 
 .stat {
