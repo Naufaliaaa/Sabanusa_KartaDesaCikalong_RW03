@@ -125,83 +125,97 @@ document.addEventListener('DOMContentLoaded', function () {
     // ================================
     const periodsData = [
         {
+            // ================================================
+            //  PERIODE 2025 – 2030
+            //  Tema: Kolaborasi lintas pendidikan sebagai
+            //        pemberi solusi cerdas untuk masyarakat
+            // ================================================
             id: 'p2025',
             label: '2025 – 2030',
             isCurrent: true,
             ketua: {
-                name: 'Budi Santoso',
+                name: 'Iqbal Fikri',
                 position: 'Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Menciptakan generasi muda yang mandiri dan kreatif melalui program kepemimpinan yang inovatif.',
+                photo: 'img/iqbal.jpeg',
+                visi: 'Mewujudkan Karang Taruna yang mampu mengkolaborasikan berbagai latar belakang pendidikan anggota sebagai kekuatan untuk memberikan solusi nyata dan cerdas bagi masyarakat desa.',
                 misi: [
-                    'Membangun karakter kepemimpinan pemuda.',
-                    'Meningkatkan keterampilan manajerial.',
-                    'Memperkuat jaringan kerja sama.'
+                    'Membangun forum lintas disiplin ilmu antar anggota untuk menghasilkan ide dan inovasi bersama.',
+                    'Mendorong setiap anggota berkontribusi sesuai keahlian akademisnya dalam program kemasyarakatan.',
+                    'Menginisiasi program konsultasi dan edukasi gratis bagi warga berdasarkan kompetensi anggota.'
                 ]
             },
             wakil: {
-                name: 'Siti Nurhaliza',
+                name: 'Helena',
                 position: 'Wakil Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Meningkatkan pemberdayaan perempuan muda dan kesetaraan gender dalam organisasi kepemudaan.',
+                photo: 'img/helena.jpeg',
+                visi: 'Menjadikan keberagaman latar pendidikan anggota sebagai aset organisasi yang secara aktif memberikan dampak positif dan solusi konkret bagi seluruh lapisan masyarakat.',
                 misi: [
-                    'Program pemberdayaan perempuan muda.',
-                    'Kegiatan kesetaraan gender.',
-                    'Pengembangan keterampilan sosial.'
+                    'Membentuk tim kerja multidisiplin yang saling melengkapi dalam setiap program kegiatan.',
+                    'Mengembangkan platform berbagi pengetahuan antar anggota dari berbagai latar pendidikan.',
+                    'Memfasilitasi program pengabdian masyarakat yang berbasis kompetensi dan keahlian anggota.'
                 ]
             }
         },
         {
+            // ================================================
+            //  PERIODE 2020 – 2025
+            //  Tema: Pemuda pemudi bermanfaat bagi seluruh
+            //        warga desa maupun luar desa
+            // ================================================
             id: 'p2020',
             label: '2020 – 2025',
             isCurrent: false,
             ketua: {
-                name: 'Ahmad Fauzi',
+                name: 'Yoga Wiganda',
                 position: 'Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Mewujudkan karang taruna yang solid, aktif, dan berdaya saing tinggi di tingkat kecamatan maupun kabupaten.',
+                photo: 'img/yoga.jpeg',
+                visi: 'Menjadikan Karang Taruna sebagai organisasi pemuda yang memberikan manfaat nyata dan luas, tidak hanya bagi warga desa sendiri tetapi juga bagi masyarakat di luar desa.',
                 misi: [
-                    'Meningkatkan solidaritas antar anggota.',
-                    'Mengembangkan program wirausaha pemuda.',
-                    'Menjalin kerjasama lintas organisasi.'
+                    'Menggiatkan program sosial kemasyarakatan yang menyentuh langsung kebutuhan warga desa.',
+                    'Membangun kemitraan dengan organisasi pemuda desa lain untuk kolaborasi lintas wilayah.',
+                    'Meningkatkan citra positif pemuda desa melalui kegiatan yang berdampak ke luar komunitas.'
                 ]
             },
             wakil: {
-                name: 'Rina Kartika',
+                name: 'Naufal Zul Faza',
                 position: 'Wakil Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Meningkatkan partisipasi perempuan dalam kegiatan sosial dan pemberdayaan masyarakat.',
+                photo: 'img/naufal.jpg',
+                visi: 'Mendorong pemuda pemudi untuk tumbuh menjadi agen perubahan yang dirasakan manfaatnya oleh seluruh warga desa dan masyarakat sekitarnya.',
                 misi: [
-                    'Mendorong peran aktif perempuan dalam organisasi.',
-                    'Program pelatihan keterampilan berbasis komunitas.',
-                    'Penguatan jaringan antar pemuda desa.'
+                    'Mengorganisir kegiatan bakti sosial dan gotong royong yang melibatkan seluruh elemen masyarakat.',
+                    'Memfasilitasi pemuda untuk aktif dalam kegiatan antar desa dan forum kepemudaan regional.',
+                    'Membangun program pemberdayaan yang berkelanjutan dan berorientasi pada kepentingan masyarakat luas.'
                 ]
             }
         },
         {
+            // ================================================
+            //  PERIODE 2015 – 2020
+            //  Tema: Pengembangan skill pemuda pemudi desa
+            // ================================================
             id: 'p2015',
             label: '2015 – 2020',
             isCurrent: false,
             ketua: {
-                name: 'Dewi Sartika',
+                name: 'Ade Yedi',
                 position: 'Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Membangun pondasi organisasi yang kuat dan menciptakan program berkelanjutan bagi generasi muda.',
+                photo: 'img/yedi.jpg',
+                visi: 'Mewujudkan generasi muda desa yang unggul, terampil, dan berdaya saing melalui pengembangan skill yang terarah dan berkelanjutan.',
                 misi: [
-                    'Menyusun struktur organisasi yang sistematis.',
-                    'Merintis program sosial kemasyarakatan.',
-                    'Membangun budaya gotong royong pemuda.'
+                    'Menyelenggarakan pelatihan keterampilan praktis yang relevan dengan kebutuhan zaman bagi pemuda desa.',
+                    'Membangun budaya belajar dan saling mengajar di antara sesama anggota Karang Taruna.',
+                    'Menciptakan wadah pengembangan bakat dan minat pemuda sebagai fondasi kemandirian.'
                 ]
             },
             wakil: {
-                name: 'Reza Pratama',
+                name: 'Eldi Julia',
                 position: 'Wakil Ketua Karang Taruna',
-                photo: 'img/profil.jpeg',
-                visi: 'Menciptakan generasi muda yang tangguh, berkarakter, dan berdedikasi tinggi terhadap masyarakat.',
+                photo: 'img/eldi.jpeg',
+                visi: 'Menjadikan setiap pemudi desa sebagai individu yang percaya diri, berkompetensi, dan mampu berkontribusi melalui peningkatan keterampilan yang terstruktur.',
                 misi: [
-                    'Program pembinaan karakter pemuda.',
-                    'Kegiatan olahraga dan seni budaya.',
-                    'Pemberdayaan ekonomi kreatif pemuda.'
+                    'Mendorong partisipasi aktif pemudi dalam setiap program pelatihan dan pengembangan diri.',
+                    'Memfasilitasi akses informasi dan peluang pengembangan skill bagi seluruh anggota.',
+                    'Mengadakan perlombaan dan pameran karya sebagai ajang apresiasi dan motivasi pemuda desa.'
                 ]
             }
         }
