@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabanusa - Kegiatan</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sabanusa - Kegiatan</title>
+    <!-- FIX: Corrected CSS paths to use css/ subfolder prefix -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/kegiatan.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="img/logo.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -38,28 +40,28 @@
 
         <section class="activities-section container">
             <div class="activities-grid">
-                <div class="activity-card">
+                <div class="activity-card reveal">
                     <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bakti Sosial">
                     <div class="card-content">
                         <h3>Bakti Sosial</h3>
                         <p>Kegiatan membersihkan lingkungan dan membantu masyarakat kurang mampu. Dilaksanakan setiap bulan.</p>
                     </div>
                 </div>
-                <div class="activity-card">
+                <div class="activity-card reveal">
                     <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pelatihan Skill">
                     <div class="card-content">
                         <h3>Pelatihan Skill Digital</h3>
                         <p>Workshop keterampilan digital untuk pemuda agar siap menghadapi era industri 4.0.</p>
                     </div>
                 </div>
-                <div class="activity-card">
+                <div class="activity-card reveal">
                     <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Lomba Olahraga">
                     <div class="card-content">
                         <h3>Turnamen Olahraga</h3>
                         <p>Lomba olahraga antar anggota untuk menjaga kesehatan dan kebersamaan.</p>
                     </div>
                 </div>
-                <div class="activity-card">
+                <div class="activity-card reveal">
                     <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Seminar Motivasi">
                     <div class="card-content">
                         <h3>Seminar Motivasi</h3>
@@ -70,38 +72,44 @@
         </section>
     </main>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-col footer-about">
-            <h3>SABANUSA</h3>
-            <p>Karang Taruna yang fokus pada pengembangan diri, sosial, dan kepemudaan. Bersama kami, generasi muda berdaya dan peduli masyarakat.</p>
-        </div>
-
-        <div class="footer-col footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/sabanusakarta/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="https://web.facebook.com/profile.php?id=61579321343778"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://www.tiktok.com/@_sabanusakarta003?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn38T0BHeeMaHxK1Uc1BHF86it4ryVlFwE_uLOILWPPQTNPI4jXrgxWaU4ug8_aem_MN_Io8_xygnt6ZFKtM7cNA"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                <li><a href="https://www.youtube.com/@sabanusakarta500"><i class="fab fa-youtube"></i> YouTube</a></li>
-                <li><a href="https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03"><i class="fab fa-github"></i> GitHub</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col footer-email">
-            <h3>Kontak Email</h3>
-            <p>Hubungi kami melalui email untuk kolaborasi atau pertanyaan!</p>
-            <div class="footer-email-box">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:kartasabanusa2025@gmail.com">kartasabanusa2025@gmail.com</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-about">
+                <h3>SABANUSA</h3>
+                <p>Karang Taruna yang fokus pada pengembangan diri, sosial, dan kepemudaan. Bersama kami, generasi muda berdaya dan peduli masyarakat.</p>
+            </div>
+            <div class="footer-col footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/sabanusakarta/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=61579321343778"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@_sabanusakarta003"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@sabanusakarta500"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-email">
+                <h3>Kontak Email</h3>
+                <p>Hubungi kami melalui email untuk kolaborasi atau pertanyaan!</p>
+                <div class="footer-email-box">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kartasabanusa2025@gmail.com">kartasabanusa2025@gmail.com</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Team Programmer SABANUSA.</p>
-    </div>
- </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Team Programmer SABANUSA.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>

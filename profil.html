@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabanusa - Profil</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sabanusa - Profil</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/profil.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="img/logo.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -32,11 +33,53 @@
 
     <main class="page-content">
         <section class="profil-hero">
-            <div class="hero-slide">
-                <div class="hero-photo">
-                    <img src="img/profil.jpeg" alt="Tim Karang Taruna">
+            <!-- Full Hero Slider -->
+            <div class="full-hero-slider">
+                <div class="slider-track" id="fullSliderTrack">
+                    <!-- Slide 1: Ketua -->
+                    <div class="full-slide active">
+                        <div class="leader-left">
+                            <div class="slide-photo">
+                                <img src="img/profil.jpeg" alt="Ketua">
+                            </div>
+                            <h3 class="leader-name">Budi Santoso</h3>
+                            <h4 class="leader-position">Ketua Karang Taruna</h4>
+                        </div>
+                        <div class="leader-right">
+                            <h2>Visi Ketua</h2>
+                            <p>Menciptakan generasi muda yang mandiri dan kreatif melalui program kepemimpinan yang inovatif.</p>
+                            <h2>Misi Ketua</h2>
+                            <p>1. Membangun karakter kepemimpinan pemuda.<br>2. Meningkatkan keterampilan manajerial.<br>3. Memperkuat jaringan kerja sama.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Wakil Ketua -->
+                    <div class="full-slide">
+                        <div class="leader-left">
+                            <div class="slide-photo">
+                                <img src="img/profil.jpeg" alt="Wakil Ketua">
+                            </div>
+                            <h3 class="leader-name">Siti Nurhaliza</h3>
+                            <h4 class="leader-position">Wakil Ketua Karang Taruna</h4>
+                        </div>
+                        <div class="leader-right">
+                            <h2>Visi Wakil Ketua</h2>
+                            <p>Meningkatkan pemberdayaan perempuan muda dan kesetaraan gender dalam organisasi kepemudaan.</p>
+                            <h2>Misi Wakil Ketua</h2>
+                            <p>1. Program pemberdayaan perempuan muda.<br>2. Kegiatan kesetaraan gender.<br>3. Pengembangan keterampilan sosial.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-content">
+
+                <!-- Slider Navigation Buttons -->
+                <button class="slider-btn prev-btn" id="fullPrevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn" id="fullNextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Leadership Dropdown (inside slider so absolute positioning works) -->
+                <div class="hero-overlay-content">
                     <button class="leadership-btn" id="leadershipBtn">
                         <i class="fas fa-users"></i> Ketua & Wakil Sebelumnya
                     </button>
@@ -48,21 +91,17 @@
                             <li><strong>2021-2022:</strong> Ketua - Dewi Sartika, Wakil - Reza Pratama</li>
                         </ul>
                     </div>
-                    <div class="visi-misi">
-                        <h2>Visi</h2>
-                        <p>Menciptakan generasi muda yang mandiri, kreatif, berdaya saing, dan peduli terhadap lingkungan sekitar.</p>
-                        <h2>Misi</h2>
-                        <p>
-                            1. Mengembangkan potensi pemuda melalui program pengembangan diri dan keterampilan.<br>
-                            2. Meningkatkan partisipasi pemuda dalam kegiatan sosial dan kemasyarakatan.<br>
-                            3. Membangun jaringan kerja sama antar pemuda dan lembaga terkait.
-                        </p>
-                    </div>
                 </div>
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
             </div>
         </section>
 
-        <section class="profil-details container">
+        <section class="profil-details container reveal">
             <div class="profil-text">
                 <h2>Siapa Kami?</h2>
                 <p>Karang Taruna adalah organisasi pemuda yang fokus pada pengembangan diri, sosial, dan kepemudaan. Didirikan pada tahun 2015, kami telah menyelenggarakan berbagai program untuk memberdayakan generasi muda dan berkontribusi pada masyarakat.</p>
@@ -70,60 +109,65 @@
             </div>
             <div class="profil-image">
                 <img src="img/profil.jpeg" alt="Tim Karang Taruna">
-                <!-- Ganti dengan foto tim asli -->
             </div>
         </section>
 
-        <section class="stats-section container">
+        <section class="stats-section container reveal">
             <div class="stats">
                 <div class="stat">
-                    <h3>150+</h3>
+                    <h3 class="counter" data-target="150">0</h3>
                     <p>Anggota Aktif</p>
                 </div>
                 <div class="stat">
-                    <h3>100+</h3>
+                    <h3 class="counter" data-target="100">0</h3>
                     <p>Kegiatan</p>
                 </div>
                 <div class="stat">
-                    <h3>10+</h3>
+                    <h3 class="counter" data-target="10">0</h3>
                     <p>Tahun Pengalaman</p>
                 </div>
             </div>
         </section>
     </main>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-col footer-about">
-            <h3>SABANUSA</h3>
-            <p>Karang Taruna yang fokus pada pengembangan diri, sosial, dan kepemudaan. Bersama kami, generasi muda berdaya dan peduli masyarakat.</p>
-        </div>
-
-        <div class="footer-col footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/sabanusakarta/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="https://web.facebook.com/profile.php?id=61579321343778"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://www.tiktok.com/@_sabanusakarta003?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn38T0BHeeMaHxK1Uc1BHF86it4ryVlFwE_uLOILWPPQTNPI4jXrgxWaU4ug8_aem_MN_Io8_xygnt6ZFKtM7cNA"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                <li><a href="https://www.youtube.com/@sabanusakarta500"><i class="fab fa-youtube"></i> YouTube</a></li>
-                <li><a href="https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03"><i class="fab fa-github"></i> GitHub</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col footer-email">
-            <h3>Kontak Email</h3>
-            <p>Hubungi kami melalui email untuk kolaborasi atau pertanyaan!</p>
-            <div class="footer-email-box">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:kartasabanusa2025@gmail.com">kartasabanusa2025@gmail.com</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-about">
+                <h3>SABANUSA</h3>
+                <p>Karang Taruna yang fokus pada pengembangan diri, sosial, dan kepemudaan. Bersama kami, generasi muda berdaya dan peduli masyarakat.</p>
+            </div>
+            <div class="footer-col footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/sabanusakarta/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=61579321343778"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@_sabanusakarta003"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@sabanusakarta500"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-email">
+                <h3>Kontak Email</h3>
+                <p>Hubungi kami melalui email untuk kolaborasi atau pertanyaan!</p>
+                <div class="footer-email-box">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kartasabanusa2025@gmail.com">kartasabanusa2025@gmail.com</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Team Programmer SABANUSA.</p>
-    </div>
-  </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Team Programmer SABANUSA.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>

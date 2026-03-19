@@ -1,0 +1,401 @@
+/* Profil Page Specific Styles */
+
+/* Hero Sections */
+.profil-hero {
+    background: white;
+    color: #1f2937;
+    padding: 80px 20px 40px;
+    height: auto;
+    min-height: 60vh;
+}
+
+/* ================================
+   FIX: Full Hero Slider
+================================ */
+.full-hero-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.full-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.leader-left {
+    flex: 0 0 35%;
+    text-align: center;
+}
+
+.leader-right {
+    flex: 1;
+}
+
+.leader-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.leader-right p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* ================================
+   FIX: Slide Photo (was missing!)
+================================ */
+.slide-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 4px solid #dc2626;
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+}
+
+.slide-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================
+   FIX: Leader Name & Position (was missing!)
+================================ */
+.leader-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.4rem;
+}
+
+.leader-position {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #dc2626;
+    margin-bottom: 0;
+}
+
+/* ================================
+   FIX: Slider Buttons (was missing!)
+================================ */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: #dc2626;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: #dc2626;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+.prev-btn {
+    left: 16px;
+}
+
+.next-btn {
+    right: 16px;
+}
+
+/* ================================
+   NEW: Slider Dots
+================================ */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.dot.active {
+    background: #dc2626;
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* ================================
+   Leadership Dropdown
+================================ */
+.hero-overlay-content {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.leadership-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(220,38,38,0.3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.leadership-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220,38,38,0.4);
+}
+
+.leadership-dropdown {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    background: white;
+    min-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.leadership-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.leadership-dropdown h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.leadership-dropdown ul {
+    list-style: none;
+}
+
+.leadership-dropdown li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.95rem;
+}
+
+.leadership-dropdown li:last-child {
+    border-bottom: none;
+}
+
+/* ================================
+   Profil Details
+================================ */
+.profil-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 0;
+    align-items: center;
+}
+
+.profil-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.profil-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.profil-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profil-image img:hover {
+    transform: scale(1.02);
+}
+
+/* ================================
+   Stats Section
+================================ */
+.stats-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stat h3 {
+    font-size: 3rem;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #555;
+    font-weight: 500;
+}
+
+/* ================================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+    .profil-hero {
+        padding: 80px 15px 20px;
+    }
+
+    .full-hero-slider {
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .full-slide {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        /* FIX: tambah padding-top agar konten tidak ketutupan button absolute */
+        padding: 4.5rem 5% 2rem;
+        text-align: center;
+    }
+
+    .leader-left {
+        flex: none;
+    }
+
+    /* FIX: Perbesar foto di mobile */
+    .slide-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .leader-right h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .leader-right p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    /* FIX: Button lebih kecil & tidak mepet tepi */
+    .hero-overlay-content {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .leadership-btn {
+        font-size: 0.78rem;
+        padding: 9px 14px;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .leadership-dropdown {
+        min-width: 240px;
+        right: 0;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .profil-details {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    .profil-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .profil-text p {
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat h3 {
+        font-size: 2.2rem;
+    }
+}

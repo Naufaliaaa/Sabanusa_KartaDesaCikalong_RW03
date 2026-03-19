@@ -1,0 +1,198 @@
+/* Kontak Page Specific Styles */
+
+/* Hero */
+.kontak-hero {
+    height: 60vh;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.kontak-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: heroFadeIn 0.8s ease forwards;
+}
+
+.kontak-hero p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    animation: heroFadeIn 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info h2 {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-item i {
+    font-size: 1.4rem;
+    color: #dc2626;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Submit button loading state */
+.cta-button.loading {
+    opacity: 0.75;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Map Section */
+.map-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.map-section h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .kontak-hero {
+        height: auto;
+        min-height: 40vh;
+        padding: 100px 20px 40px;
+    }
+
+    .kontak-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info h2 {
+        text-align: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-form .cta-button {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .map-section h3 {
+        font-size: 1.4rem;
+    }
+}
