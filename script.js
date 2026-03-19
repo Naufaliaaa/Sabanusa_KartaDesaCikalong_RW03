@@ -63,6 +63,22 @@ if (document.getElementById('contactForm')) {
     });
 }
 
+// Leadership dropdown toggle (profil.html)
+const leadershipBtn = document.getElementById('leadershipBtn');
+const leadershipDropdown = document.getElementById('leadershipDropdown');
+if (leadershipBtn && leadershipDropdown) {
+    leadershipBtn.addEventListener('click', () => {
+        leadershipDropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!leadershipBtn.contains(e.target) && !leadershipDropdown.contains(e.target)) {
+            leadershipDropdown.classList.remove('active');
+        }
+    });
+}
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

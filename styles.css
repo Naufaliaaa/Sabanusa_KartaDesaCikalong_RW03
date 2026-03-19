@@ -161,12 +161,127 @@ nav {
     padding-top: 80px;
 }
 
-.profil-hero h1,
-.kegiatan-hero h1,
-.kontak-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.profil-hero {
+    background: white;
+    color: #1f2937;
+    padding: 80px 20px 40px;
+    height: auto;
+    min-height: 60vh;
 }
+
+.hero-slide {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-photo img {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+    flex: 1;
+    position: relative;
+}
+
+.leadership-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(220,38,38,0.3);
+}
+
+.leadership-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220,38,38,0.4);
+}
+
+.leadership-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    min-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+}
+
+.leadership-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.leadership-dropdown h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.leadership-dropdown ul {
+    list-style: none;
+}
+
+.leadership-dropdown li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.95rem;
+}
+
+.leadership-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.visi-misi {
+    margin-top: 60px;
+    padding-top: 2rem;
+    border-top: 2px solid #f3f4f6;
+}
+
+.visi-misi h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.visi-misi p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+    .kegiatan-hero h1,
+    .kontak-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
 
 /* ================================
    BUTTONS
@@ -592,12 +707,54 @@ footer {
         align-items: center;
     }
 
-    .profil-hero,
     .kegiatan-hero,
     .kontak-hero {
         height: auto;
         min-height: 40vh;
         padding: 100px 20px 40px;
+    }
+
+    .profil-hero {
+        min-height: 70vh;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-slide {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-photo img {
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .leadership-btn {
+        position: static;
+        margin: 0 auto 1rem;
+        box-shadow: 0 5px 15px rgba(220,38,38,0.3);
+    }
+
+    .leadership-dropdown {
+        position: static;
+        transform: none;
+        opacity: 0;
+        visibility: hidden;
+        margin-bottom: 1rem;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+
+    .leadership-dropdown.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .visi-misi {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
     }
 
     .profil-hero h1,
