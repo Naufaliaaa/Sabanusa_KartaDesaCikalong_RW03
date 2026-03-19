@@ -404,8 +404,9 @@
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
-        /* FIX: tambah padding-top agar konten tidak ketutupan button absolute */
-        padding: 4.5rem 5% 2rem;
+        /* padding kiri-kanan diperbesar agar panah kiri/kanan tidak menutupi teks */
+        /* padding-bottom diperbesar agar badge periode tidak mepet ke teks */
+        padding: 4.5rem 60px 5rem;
         text-align: center;
     }
 
@@ -460,6 +461,22 @@
         width: 36px;
         height: 36px;
         font-size: 0.9rem;
+        /* Pindah ke pojok bawah agar tidak menutupi teks */
+        top: auto;
+        bottom: 16px;
+        transform: none;
+    }
+
+    .slider-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .prev-btn {
+        left: 16px;
+    }
+
+    .next-btn {
+        right: 16px;
     }
 
     .profil-details {

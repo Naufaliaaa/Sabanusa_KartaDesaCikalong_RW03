@@ -23,6 +23,9 @@
     font-size: 1.3rem;
     margin-bottom: 2rem;
     max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     animation: heroFadeIn 1s ease 0.3s forwards;
     opacity: 0;
 }

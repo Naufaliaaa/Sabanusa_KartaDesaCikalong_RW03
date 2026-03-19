@@ -197,9 +197,9 @@ document.addEventListener('DOMContentLoaded', function () {
             label: '2015 – 2020',
             isCurrent: false,
             ketua: {
-                name: 'Ade Yedi',
+                name: 'Eldi Julia',
                 position: 'Ketua Karang Taruna',
-                photo: 'img/yedi.jpg',
+                photo: 'img/eldi.jpeg',
                 visi: 'Mewujudkan generasi muda desa yang unggul, terampil, dan berdaya saing melalui pengembangan skill yang terarah dan berkelanjutan.',
                 misi: [
                     'Menyelenggarakan pelatihan keterampilan praktis yang relevan dengan kebutuhan zaman bagi pemuda desa.',
@@ -208,9 +208,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 ]
             },
             wakil: {
-                name: 'Eldi Julia',
+                name:'Ade Yedi' ,
                 position: 'Wakil Ketua Karang Taruna',
-                photo: 'img/eldi.jpeg',
+                photo: 'img/yedi.jpg' ,
                 visi: 'Menjadikan setiap pemudi desa sebagai individu yang percaya diri, berkompetensi, dan mampu berkontribusi melalui peningkatan keterampilan yang terstruktur.',
                 misi: [
                     'Mendorong partisipasi aktif pemudi dalam setiap program pelatihan dan pengembangan diri.',
