@@ -121,23 +121,207 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ================================
-    //   PROFIL SLIDER + DOTS
+    //   DATA SEMUA PERIODE KEPEMIMPINAN
+    // ================================
+    const periodsData = [
+        {
+            id: 'p2025',
+            label: '2025 – 2030',
+            isCurrent: true,
+            ketua: {
+                name: 'Budi Santoso',
+                position: 'Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Menciptakan generasi muda yang mandiri dan kreatif melalui program kepemimpinan yang inovatif.',
+                misi: [
+                    'Membangun karakter kepemimpinan pemuda.',
+                    'Meningkatkan keterampilan manajerial.',
+                    'Memperkuat jaringan kerja sama.'
+                ]
+            },
+            wakil: {
+                name: 'Siti Nurhaliza',
+                position: 'Wakil Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Meningkatkan pemberdayaan perempuan muda dan kesetaraan gender dalam organisasi kepemudaan.',
+                misi: [
+                    'Program pemberdayaan perempuan muda.',
+                    'Kegiatan kesetaraan gender.',
+                    'Pengembangan keterampilan sosial.'
+                ]
+            }
+        },
+        {
+            id: 'p2020',
+            label: '2020 – 2025',
+            isCurrent: false,
+            ketua: {
+                name: 'Ahmad Fauzi',
+                position: 'Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Mewujudkan karang taruna yang solid, aktif, dan berdaya saing tinggi di tingkat kecamatan maupun kabupaten.',
+                misi: [
+                    'Meningkatkan solidaritas antar anggota.',
+                    'Mengembangkan program wirausaha pemuda.',
+                    'Menjalin kerjasama lintas organisasi.'
+                ]
+            },
+            wakil: {
+                name: 'Rina Kartika',
+                position: 'Wakil Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Meningkatkan partisipasi perempuan dalam kegiatan sosial dan pemberdayaan masyarakat.',
+                misi: [
+                    'Mendorong peran aktif perempuan dalam organisasi.',
+                    'Program pelatihan keterampilan berbasis komunitas.',
+                    'Penguatan jaringan antar pemuda desa.'
+                ]
+            }
+        },
+        {
+            id: 'p2015',
+            label: '2015 – 2020',
+            isCurrent: false,
+            ketua: {
+                name: 'Dewi Sartika',
+                position: 'Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Membangun pondasi organisasi yang kuat dan menciptakan program berkelanjutan bagi generasi muda.',
+                misi: [
+                    'Menyusun struktur organisasi yang sistematis.',
+                    'Merintis program sosial kemasyarakatan.',
+                    'Membangun budaya gotong royong pemuda.'
+                ]
+            },
+            wakil: {
+                name: 'Reza Pratama',
+                position: 'Wakil Ketua Karang Taruna',
+                photo: 'img/profil.jpeg',
+                visi: 'Menciptakan generasi muda yang tangguh, berkarakter, dan berdedikasi tinggi terhadap masyarakat.',
+                misi: [
+                    'Program pembinaan karakter pemuda.',
+                    'Kegiatan olahraga dan seni budaya.',
+                    'Pemberdayaan ekonomi kreatif pemuda.'
+                ]
+            }
+        }
+    ];
+
+    // ================================
+    //   PROFIL SLIDER + DOTS + PERIOD SWITCH
     // ================================
     const fullSliderTrack = document.getElementById('fullSliderTrack');
     const fullPrevBtn = document.getElementById('fullPrevBtn');
     const fullNextBtn = document.getElementById('fullNextBtn');
     const dots = document.querySelectorAll('.dot');
+    const periodList = document.getElementById('periodList');
+    const periodBadgeText = document.getElementById('periodBadgeText');
     let currentFullSlide = 0;
-    const totalFullSlides = document.querySelectorAll('.full-slide').length || 2;
+    let activePeriodId = 'p2025';
+
+    // Render slide content from data
+    function renderPeriod(periodId) {
+        const period = periodsData.find(p => p.id === periodId);
+        if (!period) return;
+
+        activePeriodId = periodId;
+
+        // Update badge
+        if (periodBadgeText) {
+            periodBadgeText.textContent = `Periode ${period.label}${period.isCurrent ? ' (Aktif)' : ''}`;
+        }
+
+        // Animate slide content out
+        const slides = document.querySelectorAll('.full-slide');
+        slides.forEach(s => s.classList.add('switching'));
+
+        setTimeout(() => {
+            // Ketua slide
+            const ketuaNameEl = document.getElementById('slideKetuaName');
+            const ketuaPosEl  = document.getElementById('slideKetuaPos');
+            const ketuaRightEl = document.getElementById('slideKetuaRight');
+            const ketuaPhotoEl = document.getElementById('slideKetuaPhoto');
+
+            if (ketuaNameEl) ketuaNameEl.textContent = period.ketua.name;
+            if (ketuaPosEl)  ketuaPosEl.textContent  = period.ketua.position;
+            if (ketuaPhotoEl) ketuaPhotoEl.src = period.ketua.photo;
+            if (ketuaRightEl) {
+                ketuaRightEl.innerHTML = `
+                    <h2>Visi Ketua</h2>
+                    <p>${period.ketua.visi}</p>
+                    <h2>Misi Ketua</h2>
+                    <ol class="misi-list">
+                        ${period.ketua.misi.map(m => `<li>${m}</li>`).join('')}
+                    </ol>`;
+            }
+
+            // Wakil slide
+            const wakilNameEl  = document.getElementById('slideWakilName');
+            const wakilPosEl   = document.getElementById('slideWakilPos');
+            const wakilRightEl = document.getElementById('slideWakilRight');
+            const wakilPhotoEl = document.getElementById('slideWakilPhoto');
+
+            if (wakilNameEl) wakilNameEl.textContent = period.wakil.name;
+            if (wakilPosEl)  wakilPosEl.textContent  = period.wakil.position;
+            if (wakilPhotoEl) wakilPhotoEl.src = period.wakil.photo;
+            if (wakilRightEl) {
+                wakilRightEl.innerHTML = `
+                    <h2>Visi Wakil Ketua</h2>
+                    <p>${period.wakil.visi}</p>
+                    <h2>Misi Wakil Ketua</h2>
+                    <ol class="misi-list">
+                        ${period.wakil.misi.map(m => `<li>${m}</li>`).join('')}
+                    </ol>`;
+            }
+
+            // Reset slider to first slide
+            showFullSlide(0);
+
+            slides.forEach(s => s.classList.remove('switching'));
+
+            // Update active period in dropdown
+            document.querySelectorAll('.period-item').forEach(el => {
+                el.classList.toggle('active-period', el.dataset.periodId === periodId);
+            });
+
+        }, 200);
+    }
+
+    // Build dropdown list
+    if (periodList) {
+        periodsData.forEach(period => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="period-item${period.isCurrent ? ' active-period' : ''}" data-period-id="${period.id}">
+                    <span class="period-label">
+                        ${period.label}
+                        ${period.isCurrent ? ' <span style="background:#dc2626;color:white;font-size:0.7rem;padding:2px 7px;border-radius:20px;margin-left:4px;">Aktif</span>' : ''}
+                    </span>
+                    <span class="period-names">
+                        Ketua: ${period.ketua.name}
+                        <span>Wakil: ${period.wakil.name}</span>
+                    </span>
+                </div>`;
+            li.querySelector('.period-item').addEventListener('click', () => {
+                renderPeriod(period.id);
+                leadershipDropdown.classList.remove('active');
+            });
+            periodList.appendChild(li);
+        });
+    }
+
+    // Init with current period
+    renderPeriod('p2025');
 
     if (fullSliderTrack && fullPrevBtn && fullNextBtn) {
-
         function showFullSlide(index) {
+            const totalSlides = document.querySelectorAll('.full-slide').length || 2;
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
             fullSliderTrack.style.transform = `translateX(-${index * 100}%)`;
             document.querySelectorAll('.full-slide').forEach((slide, i) => {
                 slide.classList.toggle('active', i === index);
             });
-            // Update dots
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
@@ -145,36 +329,37 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         fullNextBtn.addEventListener('click', () => {
-            showFullSlide((currentFullSlide + 1) % totalFullSlides);
+            const total = document.querySelectorAll('.full-slide').length || 2;
+            showFullSlide((currentFullSlide + 1) % total);
         });
 
         fullPrevBtn.addEventListener('click', () => {
-            showFullSlide((currentFullSlide - 1 + totalFullSlides) % totalFullSlides);
+            const total = document.querySelectorAll('.full-slide').length || 2;
+            showFullSlide((currentFullSlide - 1 + total) % total);
         });
 
-        // Dot click navigation
         dots.forEach((dot, i) => {
             dot.addEventListener('click', () => showFullSlide(i));
         });
 
-        // Auto-slide every 5 seconds
+        // Auto-slide setiap 5 detik
         let autoSlideInterval = setInterval(() => {
-            showFullSlide((currentFullSlide + 1) % totalFullSlides);
+            const total = document.querySelectorAll('.full-slide').length || 2;
+            showFullSlide((currentFullSlide + 1) % total);
         }, 5000);
 
-        // Pause auto-slide on hover
-        fullSliderTrack.closest('.full-hero-slider').addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-        fullSliderTrack.closest('.full-hero-slider').addEventListener('mouseleave', () => {
+        const sliderEl = fullSliderTrack.closest('.full-hero-slider');
+        sliderEl.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        sliderEl.addEventListener('mouseleave', () => {
             autoSlideInterval = setInterval(() => {
-                showFullSlide((currentFullSlide + 1) % totalFullSlides);
+                const total = document.querySelectorAll('.full-slide').length || 2;
+                showFullSlide((currentFullSlide + 1) % total);
             }, 5000);
         });
     }
 
     // ================================
-    //   LEADERSHIP DROPDOWN
+    //   LEADERSHIP DROPDOWN TOGGLE
     // ================================
     const leadershipBtn = document.getElementById('leadershipBtn');
     const leadershipDropdown = document.getElementById('leadershipDropdown');
