@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ]
             },
             wakil: {
-                name: 'Helena',
+                name: 'Helena Oktaviani',
                 position: 'Wakil Ketua Karang Taruna',
                 photo: 'img/helena.jpeg',
                 visi: 'Menjadikan keberagaman latar pendidikan anggota sebagai aset organisasi yang secara aktif memberikan dampak positif dan solusi konkret bagi seluruh lapisan masyarakat.',
