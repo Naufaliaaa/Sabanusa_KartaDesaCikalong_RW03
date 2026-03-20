@@ -1,112 +1,114 @@
-# SABANUSA - Karang Taruna Website
+# SABANUSA - Karang Taruna Karta Desa Cikalong RW 03
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Made with](https://img.shields.io/badge/Made%20with-HTML/CSS/JS-orange)](https://developer.mozilla.org/)
+[![Website](https://img.shields.io/badge/Live%20Demo-index.html-brightgreen)](index.html)
+[![Responsive](https://img.shields.io/badge/Responsive-100%25-blue)](https://developer.mozilla.org/en-US/docs/Learn/HTML/CSS/Introduction_to_responsive_design)
+[![Made with](https://img.shields.io/badge/Made_with-HTML/CSS/JS-orange)](https://html5.org/)
 
-## 📖 About Sabanusa
+## 🎯 Tentang Sabanusa
 
-Sabanusa is the official website for **Karang Taruna Desa Cikalong RW 03**, a youth organization dedicated to youth empowerment, social development, and community engagement. Launched in 2015, Sabanusa focuses on building independent, creative youth leaders through innovative programs.
+**Sabanusa** adalah website resmi **Karang Taruna Desa Cikalong RW 03** yang didedikasikan untuk pemberdayaan pemuda, pengembangan sosial, dan keterlibatan masyarakat. Didirikan tahun 2015, Sabanusa telah menyelenggarakan 100+ kegiatan dengan 150+ anggota aktif.
 
-## 🚀 Features
+## ✨ Fitur Terbaru (2025)
 
-- **Responsive Design** - Perfect on desktop, tablet & mobile
-- **Hero Leadership Slider** - Interactive showcase of current Ketua & Wakil Ketua
-- **Animated Counters** - Dynamic stats animation
-- **Smooth Scrolling** - Professional navigation experience
-- **Contact Form** - Easy communication with organizers
-- **Social Links** - Direct access to Instagram, Facebook, TikTok, YouTube, GitHub
-- **Performance Optimized** - Fast loading with modern CSS/JS
+- **Google Maps Terintegrasi** - Lokasi akurat di halaman Kontak
+- **WhatsApp Footer** - Kontak langsung di semua halaman
+- **Leadership Slider Interaktif** - Showcase Ketua & Wakil Ketua
+- **Blog Kegiatan Lengkap** - 11+ artikel dengan foto & cerita
+- **Responsive Full** - Desktop, Tablet, Mobile
+- **Form Kontak AJAX** - Kirim pesan tanpa reload
+- **Scroll Animations** - Reveal effects modern
 
-## 📱 Live Demo
+## 📱 Demo Halaman
 
-| Page | Description |
-|------|-------------|
-| [Home](index.html) | Welcome & overview |
-| [Profil](profil.html) | Organization history & leadership |
-| [Kegiatan](kegiatan.html) | Activities & events |
-| [Kontak](kontak.html) | Contact & form |
+| Halaman | Deskripsi | Link |
+|---------|-----------|------|
+| [🏠 Home](index.html) | Overview & highlight kegiatan | [Buka](index.html) |
+| [👥 Profil](profil.html) | Sejarah & kepemimpinan | [Buka](profil.html) |
+| [📅 Kegiatan](kegiatan.html) | Semua event & blog | [Buka](kegiatan.html) |
+| [📞 Kontak](kontak.html) | Maps & form hubungi | [Buka](kontak.html) |
 
 ## 🛠 Tech Stack
 
-```html
-HTML5 | CSS3 | Vanilla JavaScript
-Font Awesome Icons | Google Fonts (Poppins)
-Responsive Grid/Flexbox | CSS Animations
-Intersection Observer API
+```
+Frontend: HTML5 | CSS3 | Vanilla JS
+Icons: Font Awesome 6
+Fonts: Poppins (Google Fonts)
+Maps: Google Maps Embed
+Responsive: CSS Grid/Flexbox
+Animations: Intersection Observer
 ```
 
-## 📂 Project Structure
+## 📁 Struktur Project
 
 ```
 Sabanusa/
-├── index.html          # Home page
-├── profil.html         # Profile & leadership
-├── kegiatan.html       # Activities
-├── kontak.html         # Contact page
-├── script.js           # Global JavaScript
-└── css/
-    ├── base.css        # Global styles
-    ├── index.css       # Home page styles
-    ├── profil.css      # Profile page styles
-    ├── kegiatan.css    # Activities styles
-    └── kontak.css      # Contact styles
-└── img/                # Images & assets
+├── index.html           # Homepage
+├── profil.html          # Profil organisasi  
+├── kegiatan.html        # Daftar kegiatan
+├── kontak.html          # Contact + Maps **UPDATED**
+├── blog/                # 11 Artikel lengkap **WA Footer**
+├── css/                 # Styles modular
+├── img/                 # Assets & kegiatan photos
+├── script.js            # JS global
+└── README.md            # 📋 Dokumen ini
 ```
 
-## 🎨 Design Features
-
-- **Modern Glassmorphism** - Subtle transparency effects
-- **Smooth Animations** - Scroll reveal & hover transitions
-- **Mobile-First** - Optimized for all screen sizes
-- **Dark/Light Adaptive** - Professional color scheme
-- **Performance** - 100/100 Lighthouse scores target
-
-## 🚀 Quick Start
+## 🚀 Cara Menjalankan
 
 1. **Download/Clone**
-   ```bash
-   git clone https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03.git
-   cd Sabanusa
-   ```
+```bash
+git clone https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03
+cd Sabanusa
+```
 
-2. **Open in Browser**
-   ```bash
-   open index.html
-   ```
+2. **Preview**
+```bash
+open index.html  # Langsung jalan!
+```
 
-3. **Edit & Deploy**
-   - Pure static - host anywhere (GitHub Pages, Netlify, Vercel)
-   - No build tools needed
+3. **Deploy Static**
+- GitHub Pages ✓
+- Netlify/Vercel ✓
+- Hosting apapun ✓ (no server needed)
 
-## 📱 Responsive Breakpoints
+## 📱 Breakpoints Responsive
 
-| Breakpoint | Width | Features |
-|------------|-------|----------|
-| Desktop | >1024px | Full layout |
-| Tablet | 768px | Compact grid |
-| Mobile | <480px | Stacked layout |
+| Device | Min Width | Layout |
+|--------|-----------|--------|
+| Desktop | 1024px+ | Full |
+| Tablet | 768px | Grid 2-col |
+| Mobile | <480px | Stack |
 
-## 🤝 Contributing
+## 🎨 Fitur Visual
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
+- **Glassmorphism Effects** - Modern transparency
+- **Hero Animations** - Leadership carousel
+- **Scroll Reveal** - Fade-in sections
+- **Hover Effects** - Cards & buttons
+- **Loading Performance** ✓ Lazy images
 
-## 📄 License
+## 🤝 Kontribusi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. Fork repo
+2. Buat branch `git checkout -b fitur-baru`
+3. Commit `git commit -m 'Tambah fitur'`
+4. Push & PR
 
-## 🙏 Acknowledgments
+## 📄 Lisensi
 
-- **Team Programmer SABANUSA** - Development team
-- **Karang Taruna Desa Cikalong RW 03** - Organization
-- Special thanks to all contributors!
+MIT License - Gunakan bebas untuk proyek serupa!
+
+## 🙌 Terima Kasih
+
+- **Team Programmer SABANUSA 2025**
+- **Karang Taruna Desa Cikalong RW 03**
+- Semua kontributor!
 
 ---
 
-⭐ **Star this repo if you found it useful!**  
-📢 **Follow for more open-source projects**
+⭐ **Star jika berguna**  
+📱 **WhatsApp: [6283837781302](https://wa.me/6283837781302)**  
+🌐 **Live Demo: Buka index.html**
 
-**© 2025 Sabanusa Karang Taruna. All rights reserved.**
+**© 2025 Sabanusa. Dibuat dengan ❤️ untuk pemuda Cikalong.**
+
