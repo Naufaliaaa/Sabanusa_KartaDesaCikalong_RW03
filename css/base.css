@@ -51,6 +51,8 @@ nav {
     gap: 0.5rem;
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-img {
