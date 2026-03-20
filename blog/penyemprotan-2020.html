@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyemprotan Disinfektan 2020 - SABANUSA</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/kegiatan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Sabanusa" class="logo-img">
+                SABANUSA
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../profil.html" class="nav-link">Profil</a></li>
+                <li><a href="../kegiatan.html" class="nav-link active">Kegiatan</a></li>
+                <li><a href="../kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="blog-hero">
+            <img src="../img/kegiatan/Penyemprotan2020.jpeg" alt="Penyemprotan Disinfektan 2020" class="blog-hero-image">
+            <div class="blog-hero-content">
+                <span class="blog-date"><i class="fas fa-calendar-alt"></i> 25 Maret 2020</span>
+                <h1>Penyemprotan Disinfektan — Pencegahan COVID-19</h1>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="blog-section reveal">
+                <h2>Deskripsi Kegiatan</h2>
+                <p class="blog-intro">Kegiatan penyemprotan disinfektan di lingkungan RW 03 sebagai upaya pencegahan dan penanggulangan penyebaran COVID-19.</p>
+            </div>
+
+            <div class="blog-section reveal">
+                <h2>Cerita Lengkap</h2>
+                <div class="blog-cerita">
+                    <p>Tanggal 25 Maret 2020, saat awal pandemi COVID-19 melanda, SABANUSA bergerak cepat menggelar operasi penyemprotan disinfektan massal di seluruh RW 03 Desa Cikalong.</p>
+                    <p>Dengan alat semprot knapsack yang disumbangkan warga, 25 anggota SABANUSA menyemprotkan disinfektan ke 150+ rumah, tempat ibadah, dan fasilitas umum. Kegiatan dimulai pukul 07.00 pagi hingga sore hari.</p>
+                    <p>Protokol keselamatan diterapkan ketat: masker, sarung tangan, jaga jarak. Warga sangat mengapresiasi inisiatif pemuda yang sigap membantu tanpa menunggu instruksi resmi.</p>
+                    <p>Aksi ini menjadi bukti nyata bahwa SABANUSA bukan hanya organisasi formalitas, tetapi garda terdepan dalam situasi darurat. Semangat gotong royong bangkit di masa sulit.</p>
+                </div>
+                <a href="../kegiatan.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Kembali ke Kegiatan
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-about">
+                <h3>SABANUSA</h3>
+                <p>Karang Taruna yang fokus pada pengembangan diri, sosial, dan kepemudaan. Bersama kami, generasi muda berdaya dan peduli masyarakat.</p>
+            </div>
+            <div class="footer-col footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/sabanusakarta/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=61579321343778"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@_sabanusakarta003"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@sabanusakarta500"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://github.com/Naufaliaaa/Sabanusa_KartaDesaCikalong_RW03"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-email">
+                <h3>Kontak Email</h3>
+                <p>Hubungi kami melalui email untuk kolaborasi atau pertanyaan!</p>
+                <div class="footer-email-box">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:kartasabanusa2025@gmail.com">kartasabanusa2025@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Team Programmer SABANUSA.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="../script.js"></script>
+    <script>
+        // Auto-scroll reveal for blog sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+
