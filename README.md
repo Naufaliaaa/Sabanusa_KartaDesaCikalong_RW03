@@ -111,4 +111,4 @@ MIT License - Free to use for similar projects!
 🌐 **Live Demo: Open index.html**
 
 **© 2025 Sabanusa. Made with ❤️ for Cikalong youth.**
-
+**© By Naufal Zul Faza.**
