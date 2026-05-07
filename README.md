@@ -106,9 +106,10 @@ MIT License - Free to use for similar projects!
 
 ---
 
-⭐ **Star if useful**  
+⭐ **Star If Useful**  
 📱 **WhatsApp: [6283837781302](https://wa.me/6283837781302)**  
 🌐 **Live Demo: Open index.html**
 
 **© 2025 Sabanusa. Made with ❤️ for Cikalong youth.**
 **© By Naufal Zul Faza Team Programmer SABANUSA.**
+** Terimakasih Untuk yang sudah membaca dan menyempatkan waktunya untuk sabanusa**
