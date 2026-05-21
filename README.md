@@ -113,4 +113,4 @@ MIT License - Free to use for similar projects!
 **© 2025 Sabanusa. Made with ❤️ for Cikalong youth.**
 **© By Naufal Zul Faza Ganteng Team Programmer SABANUSA.**
 ** Terimakasih Untuk yang sudah membaca dan menyempatkan waktunya ntuk Sabanusa**
-udh ah capek hehehe :D 
+udh ah capek hehehe saya mau tidur dulu :D 
